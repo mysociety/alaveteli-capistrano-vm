@@ -4,8 +4,8 @@ VM to act as target for Capistrano deployments of Alaveteli.
 
 ## Usage
 
-    git clone https://github.com/mysociety/alaveteli-capistrano.git
-    cd alaveteli-capistrano
+    git clone https://github.com/mysociety/alaveteli-capistrano-vm.git
+    cd alaveteli-capistrano-vm
     vagrant up
 
     # On your usual dev machine / VM
