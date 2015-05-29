@@ -8,7 +8,34 @@
 # Usage
 # =====
 #
-# TODO
+#   git clone https://github.com/mysociety/alaveteli-capistrano-vm.git
+#   cd alaveteli-capistrano-vm
+#   vagrant up
+#
+#   # On your usual dev machine / VM
+#   cat > config/deploy.yml <<EOF
+#   # Site-specific deployment configuration lives in this file
+#   default: &default
+#     repository: git://github.com/mysociety/alaveteli.git
+#     server: 192.168.33.155
+#     user: alaveteli
+#
+#   staging:
+#     <<: *default
+#     branch: develop
+#     rails_env: production
+#     deploy_to: /var/www/alaveteli/alaveteli_staging
+#
+#   production:
+#     <<: *default
+#     branch: master
+#     rails_env: production
+#     deploy_to: /var/www/alaveteli/alaveteli
+#   EOF
+#
+#   bundle exec cap -S stage=production deploy:setup
+#   bundle exec cap -S stage=production deploy:update_code
+#   bundle exec cap -S stage=production deploy
 #
 # Customizing the Vagrant instance
 # ================================
