@@ -1,31 +1,14 @@
 # Welcome! Thanks for taking an interest in contributing to Alaveteli.
-# This Vagrantfile should get you started with the minimum of fuss.
+# This Vagrantfile creates a VM with an Alaveteli production install set up
+# to receive deployments from Capistrano.
+#
+# See http://alaveteli.org/docs/installing/deploy/ for more info on deploying
+# Alaveteli with Capistrano.
 #
 # Usage
 # =====
 #
-# Get a copy of Alaveteli from GitHub and create the Vagrant instance
-#
-#   # Host
-#   $ git clone git@github.com:mysociety/alaveteli.git
-#   $ cd alaveteli
-#   $ git submodule update --init
-#   $ vagrant --no-color up
-#
-# You should now be able to ssh in to the guest and run the test suite
-#
-#   # Host
-#   $ vagrant ssh
-#
-#   # Guest
-#   $ cd /home/vagrant/alaveteli
-#   $ bundle exec rake spec
-#
-# Run the rails server and visit the application in your host browser
-# at http://10.10.10.30:3000
-#
-#   # Guest
-#   bundle exec rails server
+# TODO
 #
 # Customizing the Vagrant instance
 # ================================
