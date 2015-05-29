@@ -31,8 +31,9 @@
 #
 # Customization Options
 # =====================
-ALAVETELI_IP = ENV['ALAVETELI_CAP_VAGRANT_IP'] || "192.168.33.155"
-ALAVETELI_MEMORY = ENV['ALAVETELI_CAP_VAGRANT_MEMORY'] || 1536
+ALAVETELI_FQDN = ENV['ALAVETELI_VAGRANT_FQDN'] || "192.168.33.156"
+ALAVETELI_IP = ENV['ALAVETELI_VAGRANT_IP'] || "192.168.33.156"
+ALAVETELI_MEMORY = ENV['ALAVETELI_VAGRANT_MEMORY'] || 1536
 ALAVETELI_OS = ENV['ALAVETELI_VAGRANT_OS'] || 'wheezy64'
 
 SUPPORTED_OPERATING_SYSTEMS = {
@@ -110,7 +111,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                                              "--default " \
                                              "alaveteli " \
                                              "alaveteli " \
-                                             "#{ ALAVETELI_IP }"
+                                             "#{ ALAVETELI_FQDN }"
   config.vm.provision :shell, :inline => 'echo "alaveteli:secret" | chpasswd'
   config.vm.provision :shell, :inline => $cap_setup
 end
